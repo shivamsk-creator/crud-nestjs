@@ -12,6 +12,7 @@ async function bootstrap() {
     .setDescription('The Todo API description')
     .setVersion('1.0')
     // .addTag('cats')
+    .addServer('https://crud-nestjs-rho.vercel.app/api', 'Production')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/api', app, document);
